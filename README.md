@@ -27,31 +27,12 @@ I have chosen Pushover as it's a one time purchase.
 
 I created a python script were I have placed the MAC address of my Amazon dash button and the API and token user from Pushover.
 
-Using the 
+Using the scapy library, which I use to scan and capture the packet that is sent by the dash button, thus triggering the rest of the code.
 
-When the "doorbell" Amazon dash button is pressed I will get a notification throungh Pushover on my smartphone.
+When the "doorbell" Amazon dash button is pressed, sending a UDP packet over the WiFi network, that packet is then intercepted with the sniff function of the scapy library that listens for packets and triggers the POST call to Pushover, that then sends a notification to my phone.
 Through the app I can also track time and date when the doorbell was rang or the door was opened.
 
 I have used the Accelerometer to detect<a href="https://projects.raspberrypi.org/en/projects/getting-started-with-the-sense-hat/8/"> movement </a> and notify me through Pushover when the door is open.
 
 I have also used the Temperature, Humidity and Pressure sensors from the Sense Hat to display the <a href="https://www.instructables.com/Weather-Display-With-Sense-Hat/"> Temperature, Humidity and Pressure </a> once the door is opened.
 Also a <a href="https://projects.raspberrypi.org/en/projects/getting-started-with-the-sense-hat/3"> message </a> is displayed on the smart hat when the door is opened "Door is open" and Temperature, Humidity and Pressure results.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
